@@ -1,19 +1,15 @@
 import { Link } from "react-router-dom";
+import clsx from "clsx";
+import { Tooltip } from "@mui/material";
 
-export default function DesktopItem({
-  label,
-  href,
-  icon: Icon,
-  onClick,
-  active,
-}) {
-
-    return (
-      <li>
+export default function DesktopItem({ label, href, icon: Icon, active }) {
+  return (
+    <li>
+      <Tooltip title={label} placement="right">
         <Link
           to={href}
-          className={
-            (`
+          className={clsx(
+            `
             group
             flex
             gap-x-3
@@ -26,13 +22,13 @@ export default function DesktopItem({
             hover:text-black
             hover:bg-gray-100
                 `,
-            active && "bg-gray-100 text-black")
-          }
+            active && "bg-gray-100 text-black"
+          )}
         >
           <Icon className="h-7 w-7 shrink-0" />
           <span className="sr-only">{label}</span>
         </Link>
-      </li>
-    );
-  };
-
+      </Tooltip>
+    </li>
+  );
+}

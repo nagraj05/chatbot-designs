@@ -2,32 +2,30 @@ import DesktopItem from "./DesktopItem";
 import { IoChatboxEllipsesOutline } from "react-icons/io5";
 import { MdHelpOutline } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
-
-
+import { useLocation } from "react-router-dom";
+import Tooltip from '@mui/material/Tooltip';
 
 
 export default function Sidebar() {
+  const location = useLocation()
   const routes = [
     {
       icon: IoChatboxEllipsesOutline,
-      label: "Home",
-      active: true,
+      label: "Chat",
+      active: location.pathname === '/home',
       href: "/home",
-      onClick: () => {},
     },
     {
       icon: MdHelpOutline,
       label: "Help",
-      active: false,
+      active: location.pathname === '/help',
       href: "/help",
-      onClick: () => {},
     },
     {
       icon: IoSettingsOutline,
       label: "Settings",
-      active: false,
+      active: location.pathname === '/settings',
       href: "/settings",
-      onClick: () => {},
     },
   ];
   return (
