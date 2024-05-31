@@ -29,7 +29,7 @@ export default function LandingPage() {
           <div className="py-8">
             <button
               onClick={handlePath}
-              className="py-10 rounded-full w-[250px] bg-white flex gap-3  items-center justify-center"
+              className="py-10 rounded-full w-[250px] bg-white flex gap-3  items-center justify-center animate-pulse"
             >
               <img src={logo} alt="" />
               <p className="bg-gradient-to-r from-[#E3AB27] to-[#04A271] bg-clip-text text-transparent font-bold text-xl">
@@ -40,7 +40,7 @@ export default function LandingPage() {
         </div>
       </div>
       <div className="hidden md:block sm:absolute top-28 right-20">
-        <img src={bot} alt="" className="h-[450px] w-[250px]" />
+        <img src={bot} alt="" className="h-[450px] w-[250px] animate-bounce " />
       </div>
     </div>
   );

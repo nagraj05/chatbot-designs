@@ -31,7 +31,10 @@ export default function EmptyState() {
         </h3>
        
       </div>
-      <TextField id="outlined-basic" label="" variant="outlined" className='w-full  bg-white  '/>
+      <div className='w-full'>
+      <TextField id="outlined-basic" label="" variant="outlined" className='w-full rounded-full border-none  bg-white  '/>
+
+      </div>
     </div>
   )
 }
