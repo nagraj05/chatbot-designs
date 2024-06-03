@@ -18,29 +18,29 @@ export default function Home() {
 
   const location = useLocation();
   return (
-    <div className="flex h-screen">
+    <div className="flex h-full">
       <Sidebar />
-      <div className="h-full w-[320px]">
-        <div className="p-2 flex flex-col">
+      <div className="h-full w-[320px] flex flex-col">
+        <div className="p-2 flex-shrink-0">
           <MessageInput placeholder={"Ask something"} />
-          <div className=" h-full overflow-y-auto">
-            {data.map((item) => (
-              <div
-                className="h-full w-full mt-5 p-2 flex justify-between bg-neutral-300 rounded-md cursor-pointer"
-                key={item.id}
-              >
-                <div className="w-[250px] truncate">
-                  <h1 className="font-semibold">{item.title}</h1>
-                  <p className="text-xs font-thin">{item.body}</p>
-                </div>
-
-                <BsThreeDotsVertical className="text-xl" />
+        </div>
+        <div className="flex-grow overflow-y-auto p-2">
+          {data.map((item) => (
+            <div
+              className=" w-full mt-5 p-2 flex justify-between bg-neutral-300 rounded-md cursor-pointer"
+              key={item.id}
+            >
+              <div className="w-[250px] truncate">
+                <h1 className="font-semibold">{item.title}</h1>
+                <p className="text-xs font-thin">{item.body}</p>
               </div>
-            ))}
-          </div>
+
+              <BsThreeDotsVertical className="text-xl" />
+            </div>
+          ))}
         </div>
       </div>
-      <div className="flex-grow h-full border border-l border-gray-200 ">
+      <div className="flex-grow h-full border border-l border-gray-200">
         <Outlet />
         {location.pathname === "/home" && <EmptyState />}
       </div>

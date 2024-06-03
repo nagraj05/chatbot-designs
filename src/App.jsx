@@ -6,6 +6,7 @@ import Settings from "./pages/Settings";
 import Conversations from "./pages/Conversations";
 import SidebarLayout from "./components/sidebar/SidebarLayout";
 import HistoryLayout from "./components/HistoryLayout";
+import '../src/App.css'
 
 function App() {
   return (

@@ -22,7 +22,7 @@ export default function EmptyState() {
             text-gray-900
             "
         >
-          Start a chat with the AI-Bot...
+          Select a chat or start a new conversation
         </h3>
       </div>
     </div>

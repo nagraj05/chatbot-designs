@@ -8,7 +8,7 @@ export default function LandingPage() {
     navigate("/home");
   };
   return (
-    <div className="h-full flex flex-col relative bg-[#F2FFFE]">
+    <div className="min-h-full flex flex-col relative bg-[#F2FFFE]">
       <div className="flex flex-col items-start justify-center bg-gradient-to-r from-[#F2FFFE] to-[#C0F8F5] calc-width-70 mt-10 rounded-r-full  px-20 mb-5">
         <div className="flex flex-col py-20 ">
           <h3 className="text-md md:text-lg lg:text-lg xl:text-xl 2xl:text-xl">
