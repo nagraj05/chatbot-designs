@@ -1,6 +1,3 @@
-import TextField from '@mui/material/TextField';
-
-
 export default function EmptyState() {
   return (
     <div
@@ -11,30 +8,23 @@ export default function EmptyState() {
         lg:px-8
         h-full
         flex
-        flex-col
-        justify-between
+        justify-center
         items-center
-        bg-gray-300
+        bg-gray-100
         "
     >
-      <div className="text-center items-center flex flex-col w-full">
+      <div className="text-cen,ter items-center flex flex-col">
         <h3
           className="
             mt-2
             text-2xl
             font-semibold
             text-gray-900
-            
             "
         >
-          Start a new conversation
+          Start a chat with the AI-Bot...
         </h3>
-       
-      </div>
-      <div className='w-full'>
-      <TextField id="outlined-basic" label="" variant="outlined" className='w-full rounded-full border-none  bg-white  '/>
-
       </div>
     </div>
-  )
+  );
 }

@@ -1,10 +1,10 @@
-import Sidebar from "../components/sidebar/Sidebar";
+import Sidebar from "../components/sidebar/DesktopSidebar";
 
 export default function Help() {
   return (
-   <div className="px-20">
-    <Sidebar />
-    <h1>Help page</h1>
-   </div>
-  )
+    <div className="">
+      <Sidebar />
+      <h1>Help page</h1>
+    </div>
+  );
 }
