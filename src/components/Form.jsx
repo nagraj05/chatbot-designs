@@ -1,5 +1,6 @@
 import { HiPaperAirplane } from "react-icons/hi2";
 import MessageInput from "./sidebar/MessageInput";
+import submit from "../../public/icons/submit.svg"
 
 const Form = () => {
   return (
@@ -7,13 +8,13 @@ const Form = () => {
       className="
         py-4
         px-4
-        bg-white
         border-t
         flex
         items-center
         gap-2
         lg:gap-4
-        w-full"
+        w-full
+        bg-[#E7F0FA]"
     >
       <form
         // onSubmit={handleSubmit(onSubmit)}
@@ -31,13 +32,13 @@ const Form = () => {
           className="
             rounded-full
             p-2
-            bg-[#093F7C]
+            bg-[#EDB636]
             cursor-pointer
             hover:bg-sky-600
             transition
         "
         >
-          <HiPaperAirplane size={18} className="text-white" />
+          <img src={submit} alt="" className="text-white"/>
         </button>
       </form>
     </div>

@@ -12,7 +12,7 @@ const MessageInput = ({ id, placeholder }) => {
             font-light
             py-2
             px-4
-            bg-neutral-400
+            bg-[#E7F0FA]
             w-full
             rounded-full
             focus:outline-none

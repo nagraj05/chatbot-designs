@@ -22,7 +22,7 @@ export default function EmptyState() {
             text-gray-900
             "
         >
-          Select a chat or start a new conversation
+          Start a new Chat
         </h3>
       </div>
     </div>

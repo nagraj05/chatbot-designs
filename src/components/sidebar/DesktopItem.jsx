@@ -10,8 +10,11 @@ export default function DesktopItem({ label, href, icon: Icon, active }) {
           to={href}
           className={clsx(
             `
+            w-16
             group
             flex
+            flex-col
+            items-center
             gap-x-3
             rounded-md
             p-3
@@ -22,11 +25,11 @@ export default function DesktopItem({ label, href, icon: Icon, active }) {
             hover:text-black
             hover:bg-gray-100
                 `,
-            active && "bg-gray-100 text-black"
+            active && "bg-gray-100 text-black "
           )}
         >
           <Icon className="h-7 w-7 shrink-0" />
-          <span className="sr-only">{label}</span>
+          <span className="">{label}</span>
         </Link>
       </Tooltip>
     </li>

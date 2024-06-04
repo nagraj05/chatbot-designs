@@ -9,7 +9,7 @@ const useRoutes = () => {
   const routes = useMemo(
     () => [
       {
-        label: "Chat History",
+        label: "Chat",
         href: "/home",
         icon: IoChatboxEllipsesOutline,
         active: location.pathname === "/home",

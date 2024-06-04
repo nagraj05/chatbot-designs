@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import logo from "../../public/icons/Group 36451.svg";
+import logo from "/icons/Group 36451.svg";
 import bot from "/images/botlarge.png";
+import chatlogo from "/icons/chat-logo.svg"
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -26,21 +27,30 @@ export default function LandingPage() {
       </div>
       <div>
         <div className="bg-gradient-to-l from-[#F2FFFE] to-[#D6F0C2] px-20 rounded-l-full ml-20">
-          <div className="py-8">
+          <div className="py-5 flex gap-4">
             <button
               onClick={handlePath}
-              className="py-10 rounded-full w-[250px] bg-white flex gap-3  items-center justify-center animate-pulse"
+              className="py-8 rounded-full w-[250px] bg-white flex gap-3  items-center justify-center"
             >
               <img src={logo} alt="" />
               <p className="bg-gradient-to-r from-[#E3AB27] to-[#04A271] bg-clip-text text-transparent font-bold text-xl">
-                Continue
+                New Chat
+              </p>
+            </button>
+            <button
+              onClick={handlePath}
+              className=" rounded-full w-[250px] bg-white flex gap-3  items-center justify-center "
+            >
+              <img src={chatlogo} alt="" />
+              <p className="bg-gradient-to-r from-[#E3AB27] to-[#04A271] bg-clip-text text-transparent font-bold text-xl">
+                Chat History
               </p>
             </button>
           </div>
         </div>
       </div>
       <div className="hidden md:block sm:absolute top-28 right-20">
-        <img src={bot} alt="" className="h-[450px] w-[250px] animate-bounce " />
+        <img src={bot} alt="" className="h-[450px] w-[250px]" />
       </div>
     </div>
   );
