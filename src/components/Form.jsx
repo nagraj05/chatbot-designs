@@ -1,8 +1,17 @@
-import { HiPaperAirplane } from "react-icons/hi2";
 import MessageInput from "./sidebar/MessageInput";
-import submit from "../../public/icons/submit.svg"
+import submit from "../../public/icons/submit.svg";
+import { useState } from "react";
 
 const Form = () => {
+  const [message, setMessage] = useState([]);
+  const [ibpulValue, setIbpulValue] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setMessage([...message, ibpulValue]);
+    setIbpulValue("");
+  };
+
   return (
     <div
       className="
@@ -17,7 +26,7 @@ const Form = () => {
         bg-[#E7F0FA]"
     >
       <form
-        // onSubmit={handleSubmit(onSubmit)}
+        onSubmit={handleSubmit}
         className="flex items-center gap-2 lg:gap-4 w-full"
       >
         <MessageInput
@@ -25,6 +34,8 @@ const Form = () => {
           //   register={register}
           //   errors={errors}
           required
+          value={ibpulValue}
+          onChange={(e) => setIbpulValue(e.target.value)}
           placeholder="Write a message"
         />
         <button
@@ -38,7 +49,7 @@ const Form = () => {
             transition
         "
         >
-          <img src={submit} alt="" className="text-white"/>
+          <img src={submit} alt="" className="text-white" />
         </button>
       </form>
     </div>

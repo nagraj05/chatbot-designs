@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from "/icons/Group 36451.svg";
 import bot from "/images/botlarge.png";
-import chatlogo from "/icons/chat-logo.svg"
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -37,7 +36,7 @@ export default function LandingPage() {
                 New Chat
               </p>
             </button>
-            <button
+            {/* <button
               onClick={handlePath}
               className=" rounded-full w-[250px] bg-white flex gap-3  items-center justify-center "
             >
@@ -45,7 +44,7 @@ export default function LandingPage() {
               <p className="bg-gradient-to-r from-[#E3AB27] to-[#04A271] bg-clip-text text-transparent font-bold text-xl">
                 Chat History
               </p>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
