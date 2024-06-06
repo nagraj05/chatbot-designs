@@ -7,7 +7,7 @@ export default function Home() {
   
   const location = useLocation();
   return (
-    <div className="flex h-full">
+    <div className="flex h-full pl-20">
       <Sidebar />
       <History />
       <div className="flex-grow h-full border border-l border-gray-200">

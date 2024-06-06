@@ -48,7 +48,7 @@ export default function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="hidden md:block sm:absolute top-28 right-20">
+      <div className="hidden md:block sm:absolute top-28 right-20 animate-bounce">
         <img src={bot} alt="" className="h-[450px] w-[250px]" />
       </div>
     </div>

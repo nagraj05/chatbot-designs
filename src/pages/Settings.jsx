@@ -3,7 +3,7 @@ import Sidebar from "../components/sidebar/DesktopSidebar";
 
 export default function Settings() {
   return (
-    <div className="flex h-screen ">
+    <div className="flex h-full pl-20 ">
       <Sidebar />
       <div className="w-[320px]">
         <h1 className="">This is a settings page</h1>

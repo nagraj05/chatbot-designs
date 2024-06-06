@@ -8,7 +8,7 @@ const SidebarLayout = ({ children }) => {
     <div className="h-full">
       <DesktopSidebar />
       <MobileFooter />
-      <div className="lg:pl-20 h-full">{children || <Outlet />}</div>
+      <div className="lg:pl-24 h-full">{children || <Outlet />}</div>
     </div>
   );
 };

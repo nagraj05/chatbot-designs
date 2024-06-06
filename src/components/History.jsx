@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {   useEffect, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 
 const History = () => {
@@ -18,6 +18,13 @@ const History = () => {
           placeholder={"Ask something"}
           className=" w-full p-3 rounded-md "
         />
+        {/* <MessageInput 
+          id="message"
+          required
+          value={inpulValue}
+          onChange={(e) => setInpulValue(e.target.value)}
+          placeholder="Write a message"
+        /> */}
         <button className="border bg-[#EDB636] rounded-md absolute p-2 right-4 top-3 text-sm">
           New Chat
         </button>

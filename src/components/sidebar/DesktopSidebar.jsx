@@ -22,7 +22,7 @@ export default function DesktopSidebar() {
     lg:flex
     lg:flex-col
     justify-between
-    "'
+    '
     >
       <nav
         className="

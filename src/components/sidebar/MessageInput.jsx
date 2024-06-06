@@ -1,11 +1,11 @@
-const MessageInput = ({ id, placeholder }) => {
+const MessageInput = ({ id, placeholder, onChange, value, required }) => {
   return (
     <div className="relative w-full">
       <input
         id={id}
-        // type={type}
-        // autoComplete={id}
-        // {...register(id, {required})}
+        onChange={onChange}
+        value={value}
+        required={required}
         placeholder={placeholder}
         className="
             text-black

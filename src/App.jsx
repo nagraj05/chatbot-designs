@@ -7,22 +7,11 @@ import Conversations from "./pages/Conversations";
 import SidebarLayout from "./components/sidebar/SidebarLayout";
 import HistoryLayout from "./components/HistoryLayout";
 import "../src/App.css";
-
+import { RouterProvider } from "react-router-dom";
+import routes from "./routes/routes";
 function App() {
   return (
-      <Router>
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route element={<SidebarLayout />}>
-            <Route path="/home" element={<Home />}>
-              <Route path="conversations" element={<Conversations />} />
-            </Route>
-            <Route path="/help" element={<Help />} />
-            <Route path="/settings" element={<Settings />} />
-          </Route>
-          <Route path="/history" element={<HistoryLayout />} />
-        </Routes>
-      </Router>
+     <RouterProvider router={routes} />
   );
 }
 

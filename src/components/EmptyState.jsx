@@ -13,7 +13,7 @@ export default function EmptyState() {
         bg-gray-100
         "
     >
-      <div className="text-cen,ter items-center flex flex-col">
+      <div className="text-center items-center flex flex-col">
         <h3
           className="
             mt-2

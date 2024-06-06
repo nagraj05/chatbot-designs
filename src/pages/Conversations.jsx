@@ -7,7 +7,7 @@ const Conversations = () => {
   return (
     <div className="bg-neutral-200 h-full">
       <div className="h-full flex flex-col justify-between bg-[#D0E2F6]">
-        {/* <Header /> */}
+        <Header />
         <Body />
         <Form />
       </div>

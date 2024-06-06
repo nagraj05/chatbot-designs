@@ -4,12 +4,14 @@ import { useState } from "react";
 
 const Form = () => {
   const [message, setMessage] = useState([]);
-  const [ibpulValue, setIbpulValue] = useState("");
+  const [inpulValue, setInpulValue] = useState("");
+
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage([...message, ibpulValue]);
-    setIbpulValue("");
+    setMessage([...message, inpulValue]);
+    setInpulValue("");
   };
 
   return (
@@ -31,11 +33,9 @@ const Form = () => {
       >
         <MessageInput
           id="message"
-          //   register={register}
-          //   errors={errors}
           required
-          value={ibpulValue}
-          onChange={(e) => setIbpulValue(e.target.value)}
+          value={inpulValue}
+          onChange={(e) => setInpulValue(e.target.value)}
           placeholder="Write a message"
         />
         <button

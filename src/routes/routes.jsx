@@ -1,0 +1,33 @@
+import { createBrowserRouter } from "react-router-dom";
+import LandingPage from "../pages/LandingPage";
+import Home from "../pages/Home";
+import Conversations from "../pages/Conversations";
+import Help from "../pages/Help";
+import Settings from "../pages/Settings";
+
+
+const routes = createBrowserRouter([
+    {
+        path: "/",
+        element: <LandingPage />,
+        errorElement:<div>Error</div>
+    },
+    {
+        path: "/home",
+        element: <Home />,
+    },
+    {
+        path: "/conversations",
+        element: <Conversations />,
+    },
+    {
+        path: "/help",
+        element: <Help />,
+    },
+    {
+        path: "/settings",
+        element: <Settings />,
+    }
+]);
+
+export default routes;
