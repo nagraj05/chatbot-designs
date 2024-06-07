@@ -1,16 +1,23 @@
 import MessageInput from "./sidebar/MessageInput";
 import submit from "../../public/icons/submit.svg";
 import { useState } from "react";
+import {  useMessage } from "../context/MessageContext";
 
 const Form = () => {
-  const [message, setMessage] = useState([]);
   const [inpulValue, setInpulValue] = useState("");
+
+  const {
+    placeholder,
+    setPlaceholder,
+    messages,
+    setMessages
+  } = useMessage()
 
   
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setMessage([...message, inpulValue]);
+    setMessages([...messages, inpulValue]);
     setInpulValue("");
   };
 
@@ -36,7 +43,7 @@ const Form = () => {
           required
           value={inpulValue}
           onChange={(e) => setInpulValue(e.target.value)}
-          placeholder="Write a message"
+          placeholder={placeholder}
         />
         <button
           type="submit"

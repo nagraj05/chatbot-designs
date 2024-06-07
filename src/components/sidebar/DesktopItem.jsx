@@ -1,11 +1,9 @@
 import { Link } from "react-router-dom";
 import clsx from "clsx";
-import { Tooltip } from "@mui/material";
 
 export default function DesktopItem({ label, href, icon: Icon, active }) {
   return (
     <li>
-      <Tooltip title={label} placement="right">
         <Link
           to={href}
           className={clsx(
@@ -31,7 +29,6 @@ export default function DesktopItem({ label, href, icon: Icon, active }) {
           <Icon className="h-7 w-7 shrink-0" />
           <span className="">{label}</span>
         </Link>
-      </Tooltip>
     </li>
   );
 }

@@ -1,10 +1,23 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import sources from "../data/sources";
+import { useMessage } from "../context/MessageContext";
 
 const Body = () => {
-  const [selectedSource, setSelectedSource] = useState(null);
-  const [selectedSubSource, setSelectedSubSource] = useState(null);
+  const {
+    messages,
+    setMessages,
+    placeholder,
+    setPlaceholder,
+    selectedSource,
+    setSelectedSource,
+    selectedSubSource,
+    setSelectedSubSource,
+  } = useMessage();
+  const messageEndRef = useRef(null);
 
+  useEffect(() => {
+    messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
   const handleClick = (source) => {
     setSelectedSource(source);
     setSelectedSubSource(null);
@@ -12,9 +25,9 @@ const Body = () => {
 
   const handleSubClick = (subSource) => {
     setSelectedSubSource(subSource);
-  }
+  };
   return (
-    <div className="p-6 h-full">
+    <div className="p-6 h-full overflow-y-auto">
       <h2 className="font-semibold text-[#093F7C] mb-4">
         Select From Any Functional Area
       </h2>
@@ -57,7 +70,8 @@ const Body = () => {
                     selectedSubSource === subsource
                       ? "bg-[#093F7C] text-white"
                       : "bg-[#FFFFFF] text-[#093F7C]"
-                  }  p-5 rounded-lg cursor-pointer hover:bg-blue-500 text-center`}                  onClick={() => handleSubClick(subsource)}
+                  }  p-5 rounded-lg cursor-pointer hover:bg-blue-500 text-center`}
+                  onClick={() => handleSubClick(subsource)}
                 >
                   {subsource}
                 </li>
@@ -66,12 +80,23 @@ const Body = () => {
           </div>
         )}
         {selectedSubSource && (
-          <div className="mt-5 text-end">
+          <div className="mt-5 text-end ">
             <h1 className="font-semibold">
               You have selected {selectedSubSource}
             </h1>
           </div>
         )}
+        <div className="flex flex-col   items-end">
+          {messages.map((item, index) => (
+            <div
+              key={index}
+              className="flex justify-end border bg-blue-400 rounded-md p-4 font-semibold  mb-2"
+            >
+              <p>{item}</p>
+            </div>
+          ))}
+          <div ref={messageEndRef} />
+        </div>
       </div>
     </div>
   );

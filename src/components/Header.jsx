@@ -16,7 +16,8 @@ const Header = () => {
           lg:px-6
           justify-between
           items-center
-          shadow-sm"
+          shadow-sm
+          "
       >
         <div className="flex gap-3 items-center">
           <Link
