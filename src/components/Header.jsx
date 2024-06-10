@@ -33,18 +33,19 @@ const Header = () => {
             <HiChevronLeft size={32} />
           </Link>
 
-          <div className="flex flex-col">
+          
+        </div>
+        <div className="flex justify-center  ">
             <div
               className="
-              text-sm
-              font-light
-              text-neutral-500
+              text-lg
+              font-semibold
+              text-black
               "
             >
-              {}
+              <h1>Upag AI Bot</h1>
             </div>
           </div>
-        </div>
         <HiEllipsisHorizontal
           size={32}
           onClick={() => {}}

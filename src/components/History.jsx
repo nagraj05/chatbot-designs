@@ -1,14 +1,10 @@
-import {   useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useMessage } from "../context/MessageContext";
-import { v4 as uuidv4 } from 'uuid';
-import { Navigate, useNavigate } from "react-router-dom";
-
 
 const History = () => {
   const [data, setData] = useState([]);
-  const { setSelectedSource, setSelectedSubSource, setMessages } = useMessage()
-  
+  const { setSelectedSource, setSelectedSubSource, setMessages } = useMessage();
 
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/posts")
@@ -18,9 +14,9 @@ const History = () => {
   }, []);
 
   const handleClick = () => {
-    setSelectedSource(null)
-    setSelectedSubSource(null)
-    setMessages([])
+    setSelectedSource(null);
+    setSelectedSubSource(null);
+    setMessages([]);
   };
 
   return (
@@ -30,14 +26,10 @@ const History = () => {
           placeholder={"Ask something"}
           className=" w-full p-3 rounded-md "
         />
-        {/* <MessageInput 
-          id="message"
-          required
-          value={inpulValue}
-          onChange={(e) => setInpulValue(e.target.value)}
-          placeholder="Write a message"
-        /> */}
-        <button onClick={handleClick} className="border bg-[#EDB636] rounded-md absolute p-2 right-4 top-3 text-sm">
+        <button
+          onClick={handleClick}
+          className="border bg-[#EDB636] rounded-md absolute p-2 right-4 top-3 text-sm"
+        >
           New Chat
         </button>
       </div>

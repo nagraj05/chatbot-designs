@@ -1,24 +1,52 @@
+import image from "../../public/icons/favicon.png"
+
 const sources = [
   {
     sourceslist: [
-      "APY",
-      "Price Index",
-      "Stock",
-      "Trade",
-      "Procurement",
-      "Arrival",
-      "Balance Sheets",
-      "Other Indexes",
+      {
+        text: "Area, Yeild, Production (APY)",
+        value: "APY",
+        tooltip:"APY",
+        image:image,
+      },
+      {
+        text: "Prices",
+        value: "Prices",
+        tooltip:"MSP, Retail, Wholesale Prices",
+        image:image,
+      },
+      {
+        text:"Trade",
+        value:"Trade",
+        tooltip:"Export & Import",
+        image:image,
+      },
+      {
+        text:"Procurement",
+        value:"Procurement",
+        tooltip:"Procurement",
+        image:image,
+      },
+      {
+        text:"Market Arrivals",
+        value:"Arrival",
+        tooltip:"Market Arrivals",
+        image:image,
+      },
+      {
+        text:"UPAg",
+        value:"UPAg",
+        tooltip:"UPAg",
+        image:image,
+      },
     ],
     subsources: {
       "APY": ["DCS", "GCES", "DOCA", "PMFBY"],
-      "Price Index": ["DES", "GCES", "DOCA", "PMFBY"],
-      "Stock": ["DCS", "GCEES", "DOCA", "PMFBY"],
+      "Prices": ["DES", "GCES", "DOCA", "PMFBY"],
       "Trade": ["DCS", "GCCES", "DOCA", "PMFBY"],
       "Procurement": ["DCSS", "GCES", "DOCA", "PMFBY"],
       "Arrival": ["DCS", "GC3ES", "DOCA", "PMFBY"],
-      "Balance Sheets": ["DCSP", "GCES", "DOCA", "PMFBY"],
-      "Other Indexes": ["DCSO", "GCES", "DOCA", "PMFBY"],
+      "UPAg": ["DCSP", "GCES", "DOCA", "PMFBY"],
     },
   },
 ];

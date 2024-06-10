@@ -4,9 +4,10 @@ const MessageContext = createContext(null);
 
 const MessageProvider = ({children})=>{
     const [messages, setMessages] = useState([])
-    const [placeholder, setPlaceholder] = useState('Write a messages')
+    const [placeholder, setPlaceholder] = useState('Ask to UPAG')
     const [selectedSource, setSelectedSource] = useState(null);
     const [selectedSubSource, setSelectedSubSource] = useState(null);
+    const [inpulValue, setInpulValue] = useState("");
 
     const values = {
         messages,
@@ -16,7 +17,9 @@ const MessageProvider = ({children})=>{
         selectedSource,
         setSelectedSource,
         selectedSubSource,
-        setSelectedSubSource
+        setSelectedSubSource,
+        inpulValue,
+        setInpulValue
     }
     return(
         <MessageContext.Provider value={values}>

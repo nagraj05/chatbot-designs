@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from "/icons/Group 36451.svg";
-import bot from "/images/botlarge.png";
+import bot from "../../public/images/new.svg";
 
 export default function LandingPage() {
   const navigate = useNavigate();
