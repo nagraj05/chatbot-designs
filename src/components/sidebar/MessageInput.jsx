@@ -1,8 +1,7 @@
-const MessageInput = ({ id, placeholder, onChange, value, required }) => {
+const MessageInput = ({ placeholder, onChange, value, required }) => {
   return (
     <div className="relative w-full">
       <input
-        id={id}
         onChange={onChange}
         value={value}
         required={required}

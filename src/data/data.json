@@ -1,0 +1,80 @@
+{
+    "sources": [
+      {
+        "text": "Area, Yield, Production (APY)",
+        "value": "APY",
+        "tooltip": "APY",
+        "image": "/icons/apy.png",
+        "response": "You have selected APY. Please choose a subsources"
+      },
+      {
+        "text": "Prices",
+        "value": "Prices",
+        "tooltip": "MSP, Retail, Wholesale Prices",
+        "image": "/icons/prices.png",
+        "response": "You have selected Prices. Please choose a subsources"
+      },
+      {
+        "text": "Trade",
+        "value": "Trade",
+        "tooltip": "Export & Import",
+        "image": "/icons/trade.png",
+        "response": "You have selected Trade. Please choose a subsources"
+      },
+      {
+        "text": "Procurement",
+        "value": "Procurement",
+        "tooltip": "Procurement",
+        "image": "/icons/procurement.png",
+        "response": "You have selected Procurement. Please choose a subsources"
+      },
+      {
+        "text": "Market Arrivals",
+        "value": "Arrival",
+        "tooltip": "Market Arrivals",
+        "image": "/icons/arrival.png",
+        "response": "You have selected Market Arrivals. Please choose a subsources"
+      },
+      {
+        "text": "UPAg",
+        "value": "UPAg",
+        "tooltip": "UPAg",
+        "image": "/icons/upag.png",
+        "response": "You have selected UPAg. Please choose a subsources"
+      }
+    ],
+    "subsources": {
+      "APY": {
+        "options": ["DCS", "GCES", "DOCA", "PMFBY"],
+        "response": "You have selected APY subsources"
+      },
+      "Prices": {
+        "options": ["DES", "GCES", "DOCA", "PMFBY"],
+        "response": "You have selected Prices subsources"
+      },
+      "Trade": {
+        "options": ["DCS", "GCCES", "DOCA", "PMFBY"],
+        "response": "You have selected Trade subsources"
+      },
+      "Procurement": {
+        "options": ["DCSS", "GCES", "DOCA", "PMFBY"],
+        "response": "You have selected Procurement subsources"
+      },
+      "Arrival": {
+        "options": ["DCS", "GC3ES", "DOCA", "PMFBY"],
+        "response": "You have selected Market Arrivals subsources"
+      },
+      "UPAg": {
+        "options": ["DCSP", "GCES", "DOCA", "PMFBY"],
+        "response": "You have selected UPAg subsources"
+      }
+    },
+    "responses": [
+      "Hello! How can I assist you today?",
+      "I'm here to help you with any questions you have.",
+      "Is there anything specific you need assistance with?",
+      "Feel free to ask me anything.",
+      "I'm a dummy chatbot for demonstration purposes."
+    ]
+  }
+  

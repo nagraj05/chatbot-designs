@@ -8,6 +8,8 @@ const MessageProvider = ({children})=>{
     const [selectedSource, setSelectedSource] = useState(null);
     const [selectedSubSource, setSelectedSubSource] = useState(null);
     const [inpulValue, setInpulValue] = useState("");
+    const [conversationId, setConversationId] = useState(null);
+
 
     const values = {
         messages,
@@ -19,7 +21,9 @@ const MessageProvider = ({children})=>{
         selectedSubSource,
         setSelectedSubSource,
         inpulValue,
-        setInpulValue
+        setInpulValue,
+        conversationId,
+        setConversationId
     }
     return(
         <MessageContext.Provider value={values}>

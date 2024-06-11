@@ -2,17 +2,28 @@ import { useMemo } from "react";
 import { IoChatboxEllipsesOutline, IoSettingsOutline } from "react-icons/io5";
 import { MdHelpOutline } from "react-icons/md";
 import { useLocation } from "react-router-dom";
+import { useMessage } from "../context/MessageContext";
 
 const useRoutes = () => {
   const location = useLocation();
+  const { conversationId } = useMessage();
+
+  const isChatActive = useMemo(() => {
+    const isHome = location.pathname.startsWith("/home");
+    return (
+      isHome &&
+      location.pathname !== "/home/settings" &&
+      location.pathname !== "/home/help"
+    );
+  }, [location.pathname]);
 
   const routes = useMemo(
     () => [
       {
         label: "Chat",
-        href: "/home",
+        href: `/home/c/${conversationId}`,
         icon: IoChatboxEllipsesOutline,
-        active: location.pathname === "/home",
+        active: location.pathname.startsWith("/home"),
       },
       {
         label: "Help",
@@ -27,7 +38,7 @@ const useRoutes = () => {
         active: location.pathname === "/settings",
       },
     ],
-    [location]
+    [location, isChatActive]
   );
   return routes;
 };

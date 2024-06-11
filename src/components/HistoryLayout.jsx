@@ -5,7 +5,6 @@ const HistoryLayout = ({ children }) => {
   return (
     <SidebarLayout>
       <div className="h-full">
-        <ConversationList />
         {children}
       </div>
     </SidebarLayout>

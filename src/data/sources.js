@@ -1,10 +1,10 @@
-import image from "../../public/icons/favicon.png"
+import image from "/icons/favicon.png"
 
 const sources = [
   {
     sourceslist: [
       {
-        text: "Area, Yeild, Production (APY)",
+        text: "Area, Yield, Production (APY)",
         value: "APY",
         tooltip:"APY",
         image:image,

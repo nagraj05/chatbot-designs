@@ -1,4 +1,3 @@
-// Body.js
 import { useEffect, useRef } from "react";
 import sources from "../data/sources";
 import { useMessage } from "../context/MessageContext";
@@ -44,17 +43,17 @@ const Body = () => {
                 selectedSource === source.value
                   ? "bg-[#093F7C] text-white"
                   : "bg-[#FFFFFF] text-[#093F7C]"
-              }  p-5 rounded-lg cursor-pointer hover:bg-blue-500 text-center flex items-center justify-center gap-3`}
+              }  p-4 text-sm rounded-lg cursor-pointer hover:bg-blue-500 text-center flex items-center justify-center gap-3`}
               onClick={() => handleClick(source)}
             >
               <h1 className="font-bold">{source.text}</h1>
-              <img src={source.image} alt="Image" />
+              <img src={source.image} alt="Image" className="w-6 h-6" />
             </div>
           ))}
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-2">
           {selectedSource && (
-            <div className="text-end">
+            <div className="">
               <h1 className="font-semibold ">
                 You have selected {selectedSource}. Please choose a subsources
               </h1>
@@ -63,9 +62,9 @@ const Body = () => {
         </div>
 
         {selectedSource && (
-          <div className="mt-9">
+          <div className="mb-2">
             <h2>Subsources for {selectedSource}</h2>
-            <ul className="flex flex-wrap gap-3 justify-start mt-3">
+            <ul className="flex flex-wrap gap-3 justify-start">
               {sources[0].subsources[selectedSource].map((subsource, index) => (
                 <li
                   key={index}
@@ -83,13 +82,13 @@ const Body = () => {
           </div>
         )}
         {selectedSubSource && (
-          <div className="mt-5 text-end ">
+          <div className="mb-2">
             <h1 className="font-semibold ">
               You have selected {selectedSubSource}
             </h1>
           </div>
         )}
-        <div className="flex flex-col">
+        <div className="flex flex-col mb-2">
           {messages.map((message, index) => (
             <div
               key={index}

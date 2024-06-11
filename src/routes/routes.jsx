@@ -9,11 +9,21 @@ const routes = createBrowserRouter([
     {
         path: "/",
         element: <LandingPage />,
-        errorElement:<div>Error</div>
+        errorElement:<div>Error Page Not found</div>
     },
     {
         path: "/home",
         element: <Home />,
+        children:[
+          // {
+          //   path: "c",
+          //   element: <Conversations />,
+          // },
+          {
+            path: "c/:id",
+            element: <Conversations />,
+          },
+        ]
       },
       {
         path: "/help",

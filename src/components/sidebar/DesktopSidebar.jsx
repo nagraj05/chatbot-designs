@@ -7,7 +7,7 @@ export default function DesktopSidebar() {
 
   return (
     <div
-      className='
+      className="
     hidden
     lg:fixed
     lg:inset-y-0
@@ -22,7 +22,7 @@ export default function DesktopSidebar() {
     lg:flex
     lg:flex-col
     justify-between
-    '
+    "
     >
       <nav
         className="

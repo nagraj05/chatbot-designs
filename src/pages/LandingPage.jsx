@@ -1,11 +1,18 @@
 import { useNavigate } from "react-router-dom";
 import logo from "/icons/Group 36451.svg";
 import bot from "../../public/images/new.svg";
+import { v4 as uuidv4 } from 'uuid';
+import { useMessage } from "../context/MessageContext";
 
 export default function LandingPage() {
+  const {setConversationId } = useMessage()
   const navigate = useNavigate();
+
+
   const handlePath = () => {
-    navigate("/home");
+    const newChatId = uuidv4();
+    setConversationId(newChatId);
+    navigate(`/home/c/${newChatId}`);
   };
   return (
     <div className="min-h-full flex flex-col relative bg-[#F2FFFE]">
