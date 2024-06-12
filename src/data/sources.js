@@ -4,7 +4,7 @@ const sources = [
   {
     sourceslist: [
       {
-        text: "Area, Yield, Production (APY)",
+        text: "Area, Production, Yield  (APY)",
         value: "APY",
         tooltip:"APY",
         image:image,

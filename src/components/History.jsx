@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { BsThreeDotsVertical } from "react-icons/bs";
-import { useMessage } from "../context/MessageContext";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
+import { useMessage } from "../hooks/useMessage";
 
 const History = ({ onSelectConversation }) => {
   const [data, setData] = useState([]);
@@ -53,11 +53,11 @@ const History = ({ onSelectConversation }) => {
   };
 
   return (
-    <div className="hidden  h-full  lg:flex lg:flex-col ">
+    <div className="hidden h-full lg:flex lg:flex-col">
       <div className="p-2 flex-shrink-0 flex relative">
         <input
-          placeholder={"Ask something"}
-          className=" w-full p-3 rounded-md "
+          placeholder={"Search"}
+          className="w-full p-3 rounded-md"
         />
         <button
           onClick={handleClick}
@@ -69,14 +69,14 @@ const History = ({ onSelectConversation }) => {
       <div className="flex-grow overflow-y-auto p-2">
         {data.map((item) => (
           <div
-            className=" w-full mt-5 p-4 flex justify-between bg-[#E7F0FA] rounded-md cursor-pointer"
+            className="relative w-full mt-5 p-4 flex justify-between bg-[#E7F0FA] rounded-md cursor-pointer"
             key={item.id}
             onClick={() => handleConversation(item.id)}
           >
             <div className="w-[250px] truncate">
               <h1 className="font-semibold pb-2">{item.title}</h1>
               <p className="text-xs font-thin pb-2">{item.body}</p>
-              <div className="border  bg-[#D0E2F6] w-fit py-1 px-3 text-xs rounded-full">
+              <div className="border bg-[#D0E2F6] w-fit py-1 px-3 text-xs rounded-full">
                 <h3>lorem</h3>
               </div>
             </div>
@@ -88,13 +88,13 @@ const History = ({ onSelectConversation }) => {
               }}
             />
             {openDropdown === item.id && (
-              <div className="absolute right-[1000px] top-[120px] mt-2 w-48 bg-white border rounded-md shadow-lg">
+              <div className="absolute right-5 top-7 mt-2 w-48 bg-white border rounded-md shadow-lg">
                 <button
                   onClick={(e) => {
                     e.stopPropagation();
                     handleDelete(item.id);
                   }}
-                  className="block w-full px-4 py-2 text-left text-sm rounded-md hover:bg-[#093F7C] hover:text-white"
+                  className="block w-full px-4 py-2 text-left text-sm rounded-t-md hover:bg-[#093F7C] hover:text-white"
                 >
                   Delete
                 </button>
@@ -103,7 +103,7 @@ const History = ({ onSelectConversation }) => {
                     e.stopPropagation();
                     handleExport(item.id);
                   }}
-                  className="block w-full px-4 py-2 text-left text-sm rounded-md hover:bg-[#093F7C] hover:text-white"
+                  className="block w-full px-4 py-2 text-left text-sm rounded-b-md hover:bg-[#093F7C] hover:text-white"
                 >
                   Export
                 </button>
@@ -115,4 +115,5 @@ const History = ({ onSelectConversation }) => {
     </div>
   );
 };
+
 export default History;

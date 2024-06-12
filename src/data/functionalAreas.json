@@ -1,0 +1,47 @@
+{
+    "IsError": false,
+    "Data": [
+      {
+        "text": "Area, Yield, Production (APY)",
+        "value": "APY",
+        "tooltip": "APY",
+        "functional_area_id": 1,
+        "functional_area_name": "APY"
+      },
+      {
+        "text": "Prices",
+        "value": "Prices",
+        "tooltip": "MSP, Retail, Wholesale Prices",
+        "functional_area_id": 2,
+        "functional_area_name": "Prices"
+      },
+      {
+        "text": "Trade",
+        "value": "Trade",
+        "tooltip": "Export & Import",
+        "functional_area_id": 3,
+        "functional_area_name": "Trade"
+      },
+      {
+        "text": "Procurement",
+        "value": "Procurement",
+        "tooltip": "Procurement",
+        "functional_area_id": 4,
+        "functional_area_name": "Procurement"
+      },
+      {
+        "text": "Market Arrivals",
+        "value": "Arrival",
+        "tooltip": "Market Arrivals",
+        "functional_area_id": 5,
+        "functional_area_name": "Arrival"
+      },
+      {
+        "text": "UPAg",
+        "value": "UPAg",
+        "tooltip": "UPAg",
+        "functional_area_id": 6,
+        "functional_area_name": "UPAg"
+      }
+    ]
+  }

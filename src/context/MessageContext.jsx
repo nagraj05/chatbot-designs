@@ -1,10 +1,10 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useState } from "react";
 
 const MessageContext = createContext(null);
 
 const MessageProvider = ({children})=>{
     const [messages, setMessages] = useState([])
-    const [placeholder, setPlaceholder] = useState('Ask to UPAG')
+    const [placeholder, setPlaceholder] = useState('Ask UPAg AI-Bot')
     const [selectedSource, setSelectedSource] = useState(null);
     const [selectedSubSource, setSelectedSubSource] = useState(null);
     const [inpulValue, setInpulValue] = useState("");
@@ -32,6 +32,5 @@ const MessageProvider = ({children})=>{
     )
 }
 
-const useMessage =()=> useContext(MessageContext)
 
-export {useMessage, MessageProvider}
+export { MessageProvider, MessageContext}

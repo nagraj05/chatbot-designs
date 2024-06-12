@@ -1,5 +1,5 @@
 import { HiChevronLeft, HiEllipsisHorizontal } from "react-icons/hi2";
-import { Link } from "react-router-dom";
+import { Link} from "react-router-dom";
 
 const Header = () => {
   return (
@@ -43,7 +43,7 @@ const Header = () => {
               text-black
               "
             >
-              <h1>Upag AI Bot</h1>
+              <h1>Upag AI-Bot</h1>
             </div>
           </div>
         <HiEllipsisHorizontal

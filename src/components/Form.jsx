@@ -1,10 +1,10 @@
 import MessageInput from "./sidebar/MessageInput";
 import submit from "/icons/submit.svg";
-import { useMessage } from "../context/MessageContext";
 import responses from "../data/responses.json";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import { debounce } from "lodash";
+import { useMessage } from "../hooks/useMessage";
 
 const Form = () => {
   const [responseIndex, setResponseIndex] = useState(0);

@@ -2,7 +2,7 @@ import Sidebar from "../components/sidebar/DesktopSidebar";
 import { Outlet } from "react-router-dom";
 import History from "../components/History";
 import { useState } from "react";
-import { useMessage } from "../context/MessageContext";
+import { useMessage } from "../hooks/useMessage";
 
 export default function Home() {
   const [selectedConversation, setSelectedConversation] = useState(null);

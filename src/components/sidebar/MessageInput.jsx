@@ -8,14 +8,14 @@ const MessageInput = ({ placeholder, onChange, value, required }) => {
         placeholder={placeholder}
         className="
             text-black
-            font-light
+            font-semibold
             py-2
             px-4
             bg-[#E7F0FA]
             w-full
             rounded-full
             focus:outline-none
-            placeholder-neutral-900
+            
         "
       />
     </div>
