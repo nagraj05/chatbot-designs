@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import logo from "/icons/Group 36451.svg";
-import bot from "../../public/images/new.svg";
+import bot from "/images/new.svg";
 import { v4 as uuidv4 } from "uuid";
 import { useMessage } from "../hooks/useMessage";
 

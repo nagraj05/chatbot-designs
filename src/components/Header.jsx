@@ -1,12 +1,12 @@
 import { HiChevronLeft, HiEllipsisHorizontal } from "react-icons/hi2";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
     <>
       <div
         className="
-          bg-white
+          bg-[#E7F0FA]
           w-full
           flex
           border-b-[1px]
@@ -32,20 +32,18 @@ const Header = () => {
           >
             <HiChevronLeft size={32} />
           </Link>
-
-          
         </div>
         <div className="flex justify-center  ">
-            <div
-              className="
+          <div
+            className="
               text-lg
               font-semibold
               text-black
               "
-            >
-              <h1>Upag AI-Bot</h1>
-            </div>
+          >
+            <h1>Upag AI-Bot</h1>
           </div>
+        </div>
         <HiEllipsisHorizontal
           size={32}
           onClick={() => {}}

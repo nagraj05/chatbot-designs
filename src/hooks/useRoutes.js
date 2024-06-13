@@ -20,19 +20,19 @@ const useRoutes = () => {
   const routes = useMemo(
     () => [
       {
-        label: "Chat",
+        label: "CHAT",
         href: `/home/c/${conversationId}`,
         icon: IoChatboxEllipsesOutline,
         active: isChatActive,
       },
       {
-        label: "Help",
+        label: "HELP",
         href: "/help",
         icon: MdHelpOutline,
         active: location.pathname === "/help",
       },
       {
-        label: "Settings",
+        label: "SETTINGS",
         href: "/settings",
         icon: IoSettingsOutline,
         active: location.pathname === "/settings",

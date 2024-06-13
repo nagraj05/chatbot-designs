@@ -3,10 +3,14 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { useMessage } from "../hooks/useMessage";
+import PropTypes from "prop-types";
+import { useSourceSelection } from "../hooks/useSourceSelection";
 
 const History = ({ onSelectConversation }) => {
   const [data, setData] = useState([]);
   const [openDropdown, setOpenDropdown] = useState(null);
+
+  const { setIsSourceSelected, setIsSubSourceSelected } = useSourceSelection();
 
   const {
     setSelectedSource,
@@ -27,6 +31,8 @@ const History = ({ onSelectConversation }) => {
     setSelectedSource(null);
     setSelectedSubSource(null);
     setMessages([]);
+    setIsSourceSelected(false);
+    setIsSubSourceSelected(false);
     const newChatId = uuidv4();
     setConversationId(newChatId);
     navigate(`/home/c/${newChatId}`);
@@ -53,35 +59,37 @@ const History = ({ onSelectConversation }) => {
   };
 
   return (
-    <div className="hidden h-full lg:flex lg:flex-col">
+    <div className="hidden h-full lg:flex lg:flex-col bg-[#FFFFFF] w-[320px]">
       <div className="p-2 flex-shrink-0 flex relative">
         <input
           placeholder={"Search"}
-          className="w-full p-3 rounded-md"
+          className="w-full p-3 rounded-md bg-[#E7F0FA] shadow-md"
         />
         <button
           onClick={handleClick}
-          className="border bg-[#EDB636] rounded-md absolute p-2 right-4 top-3 text-sm"
+          className="border bg-[#EDB636] hover:bg-yellow-400 rounded-md absolute p-2 right-4 top-3 text-sm font-semibold"
         >
           New Chat
         </button>
       </div>
-      <div className="flex-grow overflow-y-auto p-2">
+      <div className="flex-grow overflow-y-auto px-2">
         {data.map((item) => (
           <div
-            className="relative w-full mt-5 p-4 flex justify-between bg-[#E7F0FA] rounded-md cursor-pointer"
+            className="relative w-full mb-2 p-4 flex justify-between bg-[#E7F0FA] shadow-md rounded-md cursor-pointer"
             key={item.id}
             onClick={() => handleConversation(item.id)}
           >
             <div className="w-[250px] truncate">
-              <h1 className="font-semibold pb-2">{item.title}</h1>
-              <p className="text-xs font-thin pb-2">{item.body}</p>
-              <div className="border bg-[#D0E2F6] w-fit py-1 px-3 text-xs rounded-full">
-                <h3>lorem</h3>
+              <h1 className="font-semibold text-md  truncate text-[#093F7C]">
+                {item.title}
+              </h1>
+              <p className="text-xs font-thin mb-2">{item.body}</p>
+              <div className="border bg-[#D0E2F6]  w-fit py-1 px-3 text-xs rounded-full">
+                <h3 className="text-[#093F7C]">lorem</h3>
               </div>
             </div>
             <BsThreeDotsVertical
-              className="text-xl"
+              className="text-lg"
               onClick={(e) => {
                 e.stopPropagation();
                 toggleDropdown(item.id);
@@ -114,6 +122,10 @@ const History = ({ onSelectConversation }) => {
       </div>
     </div>
   );
+};
+
+History.propTypes = {
+  onSelectConversation: PropTypes.func.isRequired,
 };
 
 export default History;

@@ -17,7 +17,6 @@ export default function DesktopSidebar() {
     xl:px-6
     lg:overflow-y-auto
     lg:bg-[#093F7C]
-    lg:border-r-[1px]
     lg:pb-4
     lg:flex
     lg:flex-col

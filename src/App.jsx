@@ -1,12 +1,15 @@
-import "../src/App.css";
-import {  RouterProvider } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 import routes from "./routes/routes";
 import AppProvider from "./context";
+import ErrorBoundary from "./utils/ErrorBoundary";
+
 function App() {
   return (
-    <AppProvider>
+    <ErrorBoundary>
+      <AppProvider>
         <RouterProvider router={routes} />
-    </AppProvider>
+      </AppProvider>
+    </ErrorBoundary>
   );
 }
 

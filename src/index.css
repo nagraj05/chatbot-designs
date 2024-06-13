@@ -23,8 +23,22 @@ body,
   animation: growShrink 2s infinite;
 }
 
+::-webkit-scrollbar {
+  width: 0; 
+}
 
-/* .bg-clip-text {
-  -webkit-background-clip: text;
-  background-clip: text;
-} */
+::-webkit-scrollbar-track {
+  background: #b5d5fa; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3e92f1; 
+  border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0a4486 
+}
+
+
